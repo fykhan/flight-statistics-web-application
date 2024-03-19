@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hong Kong International Airport Flight Information</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Hong Kong International Airport Flight Information</h1>
+    <div id="alert"></div>
+    <form id="search-form">
+      <label for="date-input">Date of Flight</label>
+      <input type="date" id="date-input" required>
+      <button type="submit">Search</button>
+    </form>          
+    <h2 id="center">Flight statistics on</h2>
+    <div id = "flight-statistics">
+      <div id="flight-statistics-departure">
+        <div class="info">
+            <h3>Departure</h3>
+            <div class="stat">
+              <table>
+                <tr>
+                  <td><b>Total Flights</b></td>
+                  <td class = "flight"></td>
+                </tr>
+                <tr>
+                  <td><b>Destinations</b></td>
+                  <td class = "destination"></td>
+                </tr>
+                <tr>
+                  <td><b>Special Cases</b></td>
+                  <td class="special"></td>
+                </tr>
+              </table>
+              <p><b>Departure Time</b></p>
+            </div>
+        </div>
+        <div id="departure-histogram"></div>
+        <div id="departure-ranking">
+          <h2><b>Top Ten Destinations</b></h2>
+          <table id="departure-table">
+          </table>
+        </div>
+      </div>
+      <div id="flight-statistics-arrival">
+        <div class="info">
+            <h3>Arrival</h3>
+            <div class="stat">
+              <table>
+                <tr>
+                  <td><b>Total Flights</b></td>
+                  <td class = "flight"></td>
+                </tr>
+                <tr>
+                  <td><b>Destinations</b></td>
+                  <td class = "origin"></td>
+                </tr>
+                <tr>
+                  <td><b>Special Cases</b></td>
+                  <td class="special"></td>
+                </tr>
+              </table>
+              <p><b>Arrival Time</b></p>
+            </div>
+        </div>
+        <div id="arrival-histogram"></div>
+        <div id="arrival-ranking">
+          <h2><b>Top Ten Origins</b></h2>
+          <table id="arrival-table">
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

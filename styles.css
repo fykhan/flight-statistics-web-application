@@ -1,0 +1,182 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  #flight-statistics-departure,
+  #flight-statistics-arrival {
+    margin-top: 30px;
+    margin: 10px;
+  }
+  
+  #date-input {
+    margin: 20px;
+  }
+  
+  label[for="date-input"] {
+    font-size: medium;
+  }
+  
+  .container {
+    background-color: azure;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  
+  .container h1 {
+    max-width: 600px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  
+  #flight-statistics {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #center {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    visibility: hidden;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  input[type="date"] {
+    padding: 5px;
+  }
+  
+  button {
+    padding: 5px 10px;
+  }
+  
+  #alert {
+    visibility: hidden;
+    background-color: #f8d7da;
+    font-size: small;
+    width: max-content;
+    color: #721c24;
+    padding: 5px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  #departure-ranking,
+  #arrival-ranking,
+  .info,
+  #arrival-table,
+  #departure-table,
+  .label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    visibility: hidden;
+  }
+  
+  table {
+    margin-bottom: 20px;
+  }
+  
+  .info table td,
+  #arrival-table td,
+  #departure-table td {
+    padding-right: 30px;
+  }
+  
+  #arrival-table td:last-child,
+  #departure-table td:last-child {
+    text-align: center;
+  }
+  
+  .info h3 {
+    display: block;
+    text-align: center;
+    border: 3px double black;
+  }
+  
+  .bar {
+    display: flex;
+    margin-bottom: 2.5px;
+    flex-shrink: 0;
+  }
+  
+  .label {
+    width: 30px;
+    padding-right: 10px;
+    font-size: smaller;
+    text-align: end;
+  }
+  
+  .value {
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    height: 12.5px;
+    background-color: aquamarine;
+    border-radius: 2.5px;
+    transition: width 0.5s;
+    margin-right: 10px;
+  }
+  
+  .num {
+    font-size: smaller;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  #arrival-histogram,
+  #departure-histogram {
+    width: 100%;
+    visibility: hidden;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+      align-items: center;
+    }
+
+    #alert{
+        top: 100px;
+        left: 55%;
+    }
+
+    .container h1 {
+      font-size: 24px;
+      max-width: 400px;
+      word-wrap: break-word;
+
+    }
+  
+    #flight-statistics {
+      flex-direction: column;
+      width: 100%;
+      max-width: fit-content;
+    }
+  
+    .info table td,
+    #arrival-table td,
+    #departure-table td {
+      padding-right: 30px;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    #flight-statistics-departure,
+    #flight-statistics-arrival {
+      flex: 1;
+      width: 50%;
+      margin-top: 30px;
+      margin: 10px;
+    }
+  }
